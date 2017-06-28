@@ -61,7 +61,7 @@
     "migration-create": "docker-compose run --rm user-api-mspoc node_modules/db-migrate/bin/db-migrate create --sql-file",
     "migrate": "docker-compose run --rm user-api-mspoc node_modules/db-migrate/bin/db-migrate up",
     "pretest": "docker-compose run --rm user-api-mspoc node_modules/jshint/bin/jshint lib test",
-    "test-native": "mocha --bail test/ test/acceptance/",
+    "test-native": "mocha --bail test/ test/acceptance/ test/regression/",
     "test-cov-native": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/",
     "test": "npm run pretest && docker-compose run --rm user-api-mspoc npm run test-native",
     "test-cov": "docker-compose run --rm user-api-mspoc npm run test-cov-native"

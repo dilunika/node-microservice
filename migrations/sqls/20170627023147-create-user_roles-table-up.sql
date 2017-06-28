@@ -1,9 +1,7 @@
-CREATE TABLE `users` (
+CREATE TABLE `user_roles` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(36) NOT NULL DEFAULT '',
-  `email` varchar(1000) NOT NULL DEFAULT '',
-  `password` varchar(1000) NOT NULL DEFAULT '',
-  `salt` varchar(1000) NOT NULL DEFAULT '',  
+  `name` varchar(50) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `last_updated` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
